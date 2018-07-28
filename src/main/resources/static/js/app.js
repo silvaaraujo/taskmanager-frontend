@@ -24,8 +24,6 @@
     	  $('#taskModal').on('shown.bs.modal', function () {
     		  $('#cadTitulo').focus()
     	  });
-    	  
-    	  
       },
       
       getLoadTasks: function getLoadTasks() {
@@ -146,6 +144,9 @@
 
       isReady: function isReady() {
     	console.log('http status: ',this.status);
+    	
+    	if (this.status === 401 || this.status === 403) return app.logout();
+    	
         return this.readyState === 4 && (this.status === 200 || this.status === 201 || this.status === 204);
       },
 

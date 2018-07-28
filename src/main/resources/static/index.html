@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Tasks</title>
+
+    <!-- Bootstrap -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <p>
+                  <img src="img/supero.png" alt="Supero"></img>
+                  Desafio Supero
+              </p>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="center-block">
+      <h2>Task Manager</h2>
+    </div>
+
+    <!-- Modal -->
+    <div id="taskModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="taskModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel"></h4>
+          </div>
+          
+          <div class="modal-body">
+          
+          	<div class="alert alert-error collapse" role="alert" id="errorAlert">
+			  <span>
+			  <p>O titulo deve possuir entre 5 e 20 caracteres.</p>
+			  </span>
+			</div>
+			
+            <form>
+              <input id="mdlTaskId" type="hidden">
+              <div class="form-group">
+                <label for="titulo" class="control-label">Título:</label>
+                <input id="cadTitulo" type="text" class="form-control" id="titulo" placeholder="Informe o título"></input>
+              </div>
+              <div class="form-group">
+                <label for="descricao" class="control-label">Descrição:</label>
+                <textarea id="cadDescricao" class="form-control" id="descricao" placeholder="Informe a descrição"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            <button id="btnGravar" type="submit" class="btn btn-primary">Gravar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default center-block" style="width: 90%">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <button id="btnNovaTask" type="button" class="btn btn-primary" data-toggle="modal" data-target="#taskModal">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              Nova Task
+          </button>
+        </h3>
+      </div>
+      <div class="panel-body">
+
+        <div class="center-block">
+          <table class="table table-responsive table-hover">
+            <thead>
+              <tr>
+                <th>Ações</th>
+                <th>Id</th>
+                <th>Titulo</th>
+                <th>Data criação</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="tblTasks">
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.bootstrap-growl.js"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/alerta.js" charset="utf-8"></script>
+  </body>
+</html>

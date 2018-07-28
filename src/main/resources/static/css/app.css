@@ -1,0 +1,16 @@
+h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 0px 0px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.container {
+  width: 400px;
+}

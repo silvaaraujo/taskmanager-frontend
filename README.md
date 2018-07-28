@@ -1,5 +1,5 @@
 # taskmanager-frontend  
-A simple web application to manager a task list.  
+A simple web application to manager a task list created using Spring Boot.  
   
   
 This application was created to consume an API called taskmanager-backend, for studies about JWT authentication and authorization.  

@@ -17,10 +17,15 @@
 		
     	  var btnNovo = document.getElementById("btnNovaTask");
     	  btnNovo.addEventListener('click', app.newTask, false);
+    	  
+    	  var btnLogout = document.getElementById("btnLogout");
+    	  btnLogout.addEventListener('click', app.logout, false);
 		
     	  $('#taskModal').on('shown.bs.modal', function () {
     		  $('#cadTitulo').focus()
     	  });
+    	  
+    	  
       },
       
       getLoadTasks: function getLoadTasks() {
@@ -287,6 +292,7 @@
       },
       
       logout: function logout() {
+    	  localStorage.removeItem('token');
     	  window.location.replace('./login.html');
       }
       

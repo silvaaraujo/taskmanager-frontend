@@ -14,3 +14,17 @@ h2 {
 .container {
   width: 400px;
 }
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+  padding-top: 5px;
+}
+
+.block {
+    display: inline-block; /* since, div, I don't need this right ?*/
+    width: 100%;
+}

@@ -152,7 +152,7 @@
 
       createAjaxRequest: function createAjaxRequest(method, id, callback) { 
     	  var ajax = new XMLHttpRequest();
-    	  var url = 'http://localhost:8080/tasks';
+    	  var url = 'https://taskmanager-backend.herokuapp.com/tasks';
     	  if (id) url += '/'+id;
           ajax.open(method, url, true);
           ajax.setRequestHeader('Content-Type', 'application/json');

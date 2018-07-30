@@ -31,7 +31,7 @@
       
       createAjaxRequest: function createAjaxRequest(method, callback) { 
     	  var ajax = new XMLHttpRequest();
-    	  var url = 'http://localhost:8080/login';
+    	  var url = 'https://taskmanager-backend.herokuapp.com/login';
           ajax.open(method, url, true);
           ajax.setRequestHeader("Content-type", 'application/json; charset=UTF-8');
           ajax.addEventListener('readystatechange', callback, false);
